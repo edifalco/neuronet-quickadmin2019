@@ -11,11 +11,14 @@ class UsersTableSeeder extends Seeder
             'id'             => 1,
             'name'           => 'Admin',
             'email'          => 'admin@admin.com',
-            'password'       => '$2y$10$ZSh6K4vIaByJIBTIXhyI5eyk47TgK.XGRzsheCG9FPD3Ioq0Fq0Mm',
+            'password'       => '$2y$10$DxJmGio2xcV3HnZYQ4igBOdkadvFaY3tDWgQ5uNvP54uVzpQmQCeS',
             'remember_token' => null,
-            'created_at'     => '2019-05-15 13:26:46',
-            'updated_at'     => '2019-05-15 13:26:46',
+            'created_at'     => '2019-05-15 14:00:51',
+            'updated_at'     => '2019-05-15 14:00:51',
             'deleted_at'     => null,
+            'approved'       => 1,
+            'verified'       => 1,
+            'verified_at'    => '2019-05-15 14:00:51',
         ]];
 
         User::insert($users);

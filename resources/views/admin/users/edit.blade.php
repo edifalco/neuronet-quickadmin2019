@@ -38,6 +38,19 @@
                                 {{ trans('global.user.fields.email_helper') }}
                             </p>
                         </div>
+                        <div class="form-group {{ $errors->has('approved') ? 'has-error' : '' }}">
+                            <label for="approved">{{ trans('global.user.fields.approved') }}</label>
+                            <input name="approved" type="hidden" value="0">
+                            <input value="1" type="checkbox" id="approved" name="approved" {{ (isset($user) && $user->approved) || old('approved', 0) === 1 ? 'checked' : '' }}>
+                            @if($errors->has('approved'))
+                                <p class="help-block">
+                                    {{ $errors->first('approved') }}
+                                </p>
+                            @endif
+                            <p class="helper-block">
+                                {{ trans('global.user.fields.approved_helper') }}
+                            </p>
+                        </div>
                         <div class="form-group {{ $errors->has('password') ? 'has-error' : '' }}">
                             <label for="password">{{ trans('global.user.fields.password') }}</label>
                             <input type="password" id="password" name="password" class="form-control">

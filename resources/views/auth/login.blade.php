@@ -49,7 +49,9 @@
         <a href="{{ route('password.request') }}">
             {{ trans('global.forgot_password') }}
         </a>
-
+        <a href="{{ route('register') }}">
+            {{ trans('global.register') }}
+        </a>
 
     </div>
 </div>
